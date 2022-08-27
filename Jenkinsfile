@@ -32,11 +32,11 @@ pipeline {
                         nexusArtifactUploader(
                             nexusVersion: 'nexus3',
                             protocol: 'http',
-                            nexusUrl: '3.108.62.197:8081',
+                            nexusUrl: 'localhost:8081',
                             groupId: 'pom.com.mycompany.app',
                             version: 'pom.1.0-SNAPSHOT',
-                            repository: 'maven-central-repository',
-                            credentialsId: 'NEXUS_CRED',
+                            repository: 'Jenkins-central-artifacts',
+                            credentialsId: 'nexus',
                             artifacts: [
                                 [artifactId: 'pom.my-app',
                                 classifier: '',
